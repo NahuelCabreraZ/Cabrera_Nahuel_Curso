@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>"Ingrese el numero del mes a buscar"</title>
+</head>
+<body>
+ <script>
+    document.write("Ingrese el numero del mes a buscar")
+    document.write("<br>")
+    busqueda = window.prompt("Ingrese el numero del mes a buscar", "0")
+    Search = parseInt(busqueda)
+    Meses = [":","Enero", "Febrero", "Marzo", "Abril", "Mayo","Junio", "Julio"
+            , "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ]
+    i = 0
+    resultado = "..."
+      for(i = 0 ; i=Search ; i++){
+        console.log(Meses[i])
+           if(Search = Meses[i]){
+           resultado = Meses[i]
+           }
+        }
+    
+    
+    document.write("El mes que ingresaste es:")
+    document.write("<br>")
+    document.write(resultado)
+ </script>
+</body>
+</html>
