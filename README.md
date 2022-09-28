@@ -1,4 +1,4 @@
-#Curso de programacion full stack
+# Curso de programacion full stack
 =============
 ## Comisión B
 ### Silicon Misiones - [https://siliconmisiones.gob.ar/](https://siliconmisiones.gob.ar/)
