@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Escribir un script que muestre la posición de la primera vocal de un texto introducido por
+teclado.Por ejemplo: perro = “e” es la letra Nº2 ; árbol = “a” es la letra Nº1.-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 6 TP 2</title>
+</head>
+<body>
+ <script>
+    
+    dato = prompt("Escribi tu palabra")
+    arrayVocales = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    let posicion = 0
+    let aux2 = false
+    
+    for(let i in dato){
+            if(aux2 == true){
+                break
+            }
+            for(j = 0 ; j <= arrayVocales.length ; j++){
+                            if(posicion == i){
+                                aux = parseInt(i)
+                                posicion = aux + 1
+
+                            }
+                    if(dato[i] == arrayVocales[j]){
+ 
+                        document.write("la primera vocal de la palabra: " ,  dato )
+                        document.write("<br>")
+                        document.write("es ", dato[i], " y esta en la posicion numero ", posicion)
+                        
+                       aux2 = true
+                    
+                    }
+
+            }
+
+        }
+    
+
+ </script>
+</body>
+</html>

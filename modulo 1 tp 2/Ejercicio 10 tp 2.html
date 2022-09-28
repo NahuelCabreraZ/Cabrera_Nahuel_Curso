@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--Escribir un programa que reciba el número del mes y devuelva si tiene 31, 30 o menos días.-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 10 TP 2</title>
+</head>
+<body>
+ <script>
+
+    mesInput = prompt("Ingrese el numero del mes que quiere averiguar")
+    Mes = parseInt(mesInput)
+    Meses = ["","Enero", "febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    MesesDias = ["", 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
+    for(let i = 1 ; i <= Meses.length ; i++){
+            if(Mes == i){
+                document.write("El mes de " + Meses[i] + " tiene " + MesesDias[i] )
+                break
+            }
+        }
+
+ </script>
+</body>
+</html>

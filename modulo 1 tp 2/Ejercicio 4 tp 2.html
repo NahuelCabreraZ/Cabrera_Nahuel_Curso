@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Escribir el código de una función a la que se pasa como parámetro un número entero y
+devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar
+por pantalla el resultado devuelto por la función. -->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 4 TP 2</title>
+</head>
+<body>
+ <script>
+
+    dato = prompt("Escriba el numero")
+
+        if( dato % 2 === 0){
+            
+            document.write("El numero que usted ingreso es Par")
+        }
+        else{
+            
+            document.write("El numero que ingreso es impar")
+            
+        }
+        // Uso el signo "%" porque es una asignacion de residuo (tipo el mod en el Pseint) si ese mod es estrictamente igual a 0,
+        //se cumple la condicion if y escribe en pantalla, si el resto no es 0, va al else
+        
+ </script>
+</body>
+</html>

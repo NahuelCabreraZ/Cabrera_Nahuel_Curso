@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--Crea una función que genere 100 números aleatorios entre 1 y 100 que no se repitan y luego
+imprima por pantalla usando document.write(text).-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 8 TP 2</title>
+</head>
+<body>
+ <script>
+
+var cantidadNumeros = 100;
+var aleatorio = []
+        while(aleatorio.length < cantidadNumeros ){
+            var numeroAleatorio = Math.ceil(Math.random() * cantidadNumeros);
+            var bandera = false;
+                for(var i = 0 ; i < aleatorio.length ; i++){
+                    if(aleatorio [i] == numeroAleatorio){
+                        bandera = true;
+                        break;
+                    }
+                }
+                    if(!bandera){
+                        aleatorio[aleatorio.length] = numeroAleatorio;
+                    }
+
+        }
+
+        for(i = 0 ; i < aleatorio.length ; i++){
+            document.write( aleatorio[i]);
+            document.write("<br>")
+        }
+ 
+ </script>
+</body>
+</html>

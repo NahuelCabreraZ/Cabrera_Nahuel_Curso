@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 5 TP 2</title>
+</head>
+<body>
+ <script>
+
+    cadenaDeTexto = prompt("Ingrese su cadena de texto")
+        if(typeof(cadenaDeTexto) == "string"){
+                if(cadenaDeTexto == cadenaDeTexto.toUpperCase()){
+                    document.write("La cadena de texto ingresada está todo en mayúsculas")
+                }
+                    
+                if(cadenaDeTexto == cadenaDeTexto.toLowerCase()){
+                    document.write("La cadena de texto ingresada está todo en minusculas")
+                }
+        }
+
+        if(cadenaDeTexto != cadenaDeTexto.toLowerCase() && cadenaDeTexto != cadenaDeTexto.toUpperCase()){
+            document.write("La cadena tiene mayus y minus")
+        }
+ </script>
+</body>
+</html>

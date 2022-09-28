@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--Crear un programa que recibe las notas de un alumno, todos los números deben ser naturales
+<11. Debe calcular el promedio. Por último imprimir en pantalla si el valor de media es < 5
+“Reprobado”, entre 6 y 8 “Aprobado” y si es mayor a 8 “Sobresaliente”-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO 9 TP 2</title>
+</head>
+<body>
+ <script>
+
+    var notaXteclado = prompt("Ingrese cuantas notas tiene el alumno", "")
+    var notas = parseInt(notaXteclado)
+    var arrayNotas = []
+    var posicion = 1
+    
+    for(i = 0 ; i < notas ; i++){
+        arrayNotas[i] = prompt("nota numero " + posicion)
+        arrayNotas[i] = parseInt(arrayNotas[i])
+        posicion++
+
+    }
+    
+    let sumatoria = 0
+        
+        for(i = 0 ; i < notas ; i++){
+            sumatoria = sumatoria + arrayNotas[i]
+        }
+        
+        document.write("Las notas ingresadas son: " + arrayNotas)
+        document.write("<br>")
+        
+        promedio = (sumatoria / notas)
+
+        document.write("el promedio del alumno es " + promedio)
+        document.write("<br>")
+        
+        if(promedio < 5){
+            document.write("El alumno está desaprobado")
+        }
+
+        if(promedio > 5 && promedio < 8){
+            document.write("El alumno está aprobado")
+        }
+        
+        if(promedio > 8){
+            document.write("Alumno Sobresaliente")
+        }
+
+ </script>
+</body>
+</html>

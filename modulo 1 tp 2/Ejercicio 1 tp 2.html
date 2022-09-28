@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+
+
+   <script>
+      var char;
+      var valores = [true, false, 2, "hola", "mundo", 3, char];
+      var ArrayDeString = valores.filter(function (valor){
+         if(typeof(valor) == "string"){
+            return true
+    }
+})
+
+
+   const numMasLargo = ArrayDeString.sort(function (a,b){
+    
+    if(a.length > b.length){
+        return 1
+    }
+    
+    else{
+        return -1
+    }
+})
+
+   //Con sort() lo que hacemos es ordenar el array de String. Como se ordena de menor a mayor,
+   //la longitud de "b" (Segundo elemento del ArrayDeString) siempre será mayor a la de "a" (Primer elemento del ArrayDeString)
+
+    console.log("El texto mas largo del array de string es ", ArrayDeString[ArrayDeString.length - 1]);
+    document.write("El texto mas largo del array de string es " + ArrayDeString[ArrayDeString.length - 1])
+    document.write("<br>")
+    console.log("Ordenado de menor a mayor: ", numMasLargo);
+    document.write("Ordenado de menor a mayor: ", numMasLargo[0])
+    document.write("<br>")
+    document.write("Ordenado de menor a mayor: ", numMasLargo[1])
+    document.write("<br>")
+    
+
+    //Ahora hacemos algo similar con los numeros
+    //filtramos los numeros del array original en un nuevo array(ArrayDeNumeros)
+    
+    var ArrayDeNumeros = valores.filter(function(valor) {
+        if (typeof(valor) == "number") {
+           return true
+        }else {
+           return false
+        }
+     });
+
+     for(let i = 0 ; i <= 0 ; i++){
+   
+        console.log("2 + 3 =", (ArrayDeNumeros[i] + ArrayDeNumeros[i + 1]));
+        console.log("2 - 3 =", (ArrayDeNumeros[i] - ArrayDeNumeros[i + 1]));
+        console.log("2 * 3 =", (ArrayDeNumeros[i] * ArrayDeNumeros[i + 1]));
+        console.log("2 / 3 =", (ArrayDeNumeros[i] / ArrayDeNumeros[i + 1]));
+
+        document.write("2 + 3 =", (ArrayDeNumeros[i] + ArrayDeNumeros[i + 1]));
+        document.write("<br>")
+        document.write("2 - 3 =", (ArrayDeNumeros[i] - ArrayDeNumeros[i + 1]))
+        document.write("<br>")
+        document.write("2 * 3 =", (ArrayDeNumeros[i] * ArrayDeNumeros[i + 1]))
+        document.write("<br>")
+        document.write("2 / 3 =", (ArrayDeNumeros[i] / ArrayDeNumeros[i + 1]))
+     }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EJERCICIO NUMERO 3</title>
+</head>
+<body>
+ <script>
+   
+   var dato = prompt("Ingrese el numero a factorear")
+   document.write("<br>")
+   document.write("FACTOREO DE UN NUMERO")
+   document.write("<br>")
+   
+    
+    var factoreo = dato
+   for ( i = 1 ; i <= dato ; i++ ){
+        document.write("Voy en la vuelta " + i)
+        document.write("<br>")
+        factoreo *= i
+        
+    }
+    document.write("<br>")
+    document.write("El factoreo del numero " + dato + " es igual a " + factoreo);
+
+ </script>
+</body>
+</html>
