@@ -1,13 +1,13 @@
-{"Departamentos":[
-    {"Contabilidad":[{
+{
+    "Contabilidad":[{
         "idEmpleado": 10,
         "Nombre": "Juan Segovia"},
          {
          "idEmpleado": 15,
             "Nombre": "Ramiro Romero"}
-  ]},
+  ],
   
-  {
+  
     "Tecnologia":[{
     "id_empleado": 12, 
     "nombre": "Pablo Richmon", 
@@ -20,17 +20,15 @@
     "id_empleado": 24,
     "nombre": "Pedro Mendez",
     "puesto": "FullStack JS"}
-  ]},
-  {
+  ],
+  
     "Produccion":[{
     "id_empleado": 7, 
     "nombre": "Gabriela Lezcano"}
-  ]},
-  {
+  ],
+  
     "Comercial":[{
     "id_empleado": 2, 
     "nombre": "Fabiana Martinez"}
-  ]}
-
-    
-  ]}
+  ]
+}
