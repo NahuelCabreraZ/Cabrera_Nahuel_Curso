@@ -3,7 +3,7 @@
 ## Para desarrollar local
 - Descargar el repositorio
 ```sh
-$ git clone git@github.com:FacundoRauber/alpha-silicon.git
+$ git clone https://github.com:Nahuiii/Cabrera_Nahuel/TP 9.a.git
 ```
 - Restaurar la copia de la base de datos
 - Dentro de l carpeta /alpha-silicon instalar los paquetes necesarios:
@@ -25,14 +25,14 @@ $ npm run dev
 
 ## Como usuar:
 ### Para listar todas las personas:
--- GET http://localhost:8080/api/persona
+-- GET http://localhost:8000/api/persona
 
 ### Para buscar una persona por DNI
--- GET http://localhost:8080/api/persona/_numeroDeDNI_
+-- GET http://localhost:8000/api/persona/_numeroDeDNI_
 - _numeroDeDNI_: es el numero de DNI de un a persona que esta guardada en la base de datos.
 
 ### Para insertar personas:
--- POST http://localhost:8080/api/persona
+-- POST http://localhost:8000/api/persona
 ```json
     {
         "nombre": "Gabriela",
@@ -43,7 +43,7 @@ $ npm run dev
     }
 ```
 ### Para editar personas:
--- PUT http://localhost:8080/api/persona/_numeroDeDNI_
+-- PUT http://localhost:8000/api/persona/_numeroDeDNI_
 - _numeroDeDNI_: es el numero de DNI de un a persona que esta guardada en la base de datos.
 ```json
 {
@@ -56,10 +56,10 @@ $ npm run dev
     }
 ```
 ### Para eliminar fisicamente una persona (en la base de datos)
-DELETE http://localhost:8080/api/persona/del/_numeroDeDNI_
+DELETE http://localhost:8000/api/persona/del/_numeroDeDNI_
 - _numeroDeDNI_: es el numero de DNI de un a persona que esta guardada en la base de datos.
 
 ### Para eliminar logicamente una persona (se realiza un update del estado):
-DELETE http://localhost:8080/api/persona/_numeroDeDNI_
+DELETE http://localhost:8000/api/persona/_numeroDeDNI_
 - _numeroDeDNI_: es el numero de DNI de un a persona que esta guardada en la base de datos.
 
