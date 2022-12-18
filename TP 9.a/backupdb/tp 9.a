@@ -1,0 +1,76 @@
+CREATE TABLE `alpha-silicon`.`cursos` (
+  `idcursos` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(50) NULL,
+  `descripcion` TEXT NULL,
+  `estado` CHAR(1) NULL DEFAULT '1',
+  PRIMARY KEY (`idcursos`),
+  UNIQUE INDEX `idcursos_UNIQUE` (`idcursos` ASC) VISIBLE);
+  
+  CREATE TABLE `alpha-silicon`.`usuarios` (
+  `idusuarios` INT NOT NULL AUTO_INCREMENT,
+  `nickname` VARCHAR(100) NULL,
+  `email` VARCHAR(100) NULL,
+  `password` VARCHAR(100) NULL,
+  `estado` CHAR(1) NULL DEFAULT '1',
+  PRIMARY KEY (`idusuarios`),
+  UNIQUE INDEX `idusuarios_UNIQUE` (`idusuarios` ASC) VISIBLE,
+  UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
+  
+  CREATE TABLE `alpha-silicon`.`materias` (
+  `idmaterias` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NULL,
+  `objetivo` TEXT NULL,
+  `plan_estudio` TEXT NULL,
+  `estado` CHAR(1) NULL DEFAULT '1',
+  PRIMARY KEY (`idmaterias`),
+  UNIQUE INDEX `idmaterias_UNIQUE` (`idmaterias` ASC) VISIBLE);
+
+CREATE TABLE `alpha-silicon`.`sedes` (
+  `idsedes` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NULL,
+  `direccion` TEXT NULL,
+  `localidad` VARCHAR(50) NULL,
+  `cod_postal` VARCHAR(10) NULL,
+  `telcontacto1` VARCHAR(15) NULL,
+  `telcontacto2` VARCHAR(15) NULL,
+  `estado` CHAR(1) NULL DEFAULT '1',
+  PRIMARY KEY (`idsedes`),
+  UNIQUE INDEX `idsedes_UNIQUE` (`idsedes` ASC) VISIBLE);
+  
+  CREATE TABLE `alpha-silicon`.`personas` (
+  `idpersonas` INT NOT NULL AUTO_INCREMENT,
+  `dni` VARCHAR(10) NULL,
+  `nombre` VARCHAR(45) NULL,
+  `apellido` VARCHAR(45) NULL,
+  `sexo` VARCHAR(20) NULL,
+  `fecha_nacimiento` DATETIME NULL,
+  `estado` CHAR(1) NULL,
+  PRIMARY KEY (`idpersonas`),
+  UNIQUE INDEX `idpersonas_UNIQUE` (`idpersonas` ASC) VISIBLE);
+
+
+INSERT INTO `alpha-silicon`.`cursos` (`nombre`, `descripcion`) VALUES ('Programacion Full Stack', 'Desarrollo Web y aplicaciones');
+INSERT INTO `alpha-silicon`.`cursos` (`nombre`, `descripcion`) VALUES ('Ingles basico', 'Ingles basico');
+INSERT INTO `alpha-silicon`.`cursos` (`nombre`, `descripcion`) VALUES ('Robotica', 'Arquitectura Basica, arduino');
+INSERT INTO `alpha-silicon`.`cursos` (`nombre`, `descripcion`) VALUES ('Introduccion a la Programacion', 'Pseudocodigo');
+INSERT INTO `alpha-silicon`.`cursos` (`nombre`, `descripcion`) VALUES ('Ingles Intermedio', 'Ingles intermedio');
+
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('Javascript', 'Funcionalidades y comportamiento', '2022');
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('Backend', 'Nexo, sincronizacion y endpoints', '2022');
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('Frontend', 'html, css', '2022');
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('Database', 'Consultas Sql', '2022');
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('React', 'Conectividad al servidor y base de datos', '2022');
+INSERT INTO `alpha-silicon`.`materias` (`nombre`, `objetivo`, `plan_estudio`) VALUES ('Boostrap', 'Librerias para html', '2022');
+
+INSERT INTO `alpha-silicon`.`sedes` (`nombre`, `direccion`, `localidad`, `cod_postal`, `telcontacto1`) VALUES ('Posadas', 'Rioja 5554', 'Posadas', '3300', '3764685971');
+INSERT INTO `alpha-silicon`.`sedes` (`nombre`, `direccion`, `localidad`, `cod_postal`, `telcontacto1`) VALUES ('Obera', 'Peron 1331', 'Obera', '3400', '3755412563');
+INSERT INTO `alpha-silicon`.`sedes` (`nombre`, `direccion`, `localidad`, `cod_postal`, `telcontacto1`) VALUES ('Bernardo', 'Salvador 443', 'Bernardo de Irigoyen', '3500', '3763125478');
+INSERT INTO `alpha-silicon`.`sedes` (`nombre`, `direccion`, `localidad`, `cod_postal`, `telcontacto1`) VALUES ('Candelaria', 'Messi 1551', 'Candelaria', '3600', '3766159889');
+INSERT INTO `alpha-silicon`.`sedes` (`nombre`, `direccion`, `localidad`, `cod_postal`, `telcontacto1`) VALUES ('Iguazu', 'Guacurari 25', 'Iguazu', '3000', '3743789858');
+
+INSERT INTO `alpha-silicon`.`usuarios` (`nickname`, `email`, `password`) VALUES ('jorge12', 'jorgegutierrez@hotmail.com', '1234');
+INSERT INTO `alpha-silicon`.`usuarios` (`nickname`, `email`, `password`) VALUES ('marcos7', 'marcoscr7@hotmail.com', '4567');
+INSERT INTO `alpha-silicon`.`usuarios` (`nickname`, `email`, `password`) VALUES ('JulianMarturet', 'julianM@hotmail.com', '78910');
+INSERT INTO `alpha-silicon`.`usuarios` (`nickname`, `email`, `password`) VALUES ('Micaela33', 'micami@hotmail.com', '4321');
+INSERT INTO `alpha-silicon`.`usuarios` (`nickname`, `email`, `password`) VALUES ('SofiaN', 'sofiveggie@hotmail.com', '7654');
