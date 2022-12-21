@@ -24,6 +24,11 @@ app.use("/api/usuarios", usuariosCont);
 const cursosCont = require("./src/controller/cursosController.js");
 app.use("/api/cursos", cursosCont);
 
+const materiasCont = require("./src/controller/materiasController.js");
+app.use("/api/materias", materiasCont);
+
+const sedesCont = require("./src/controller/sedeController.js");
+app.use("/api/sedes", sedesCont);
 /*
 const userCont = require("userController.js");
 app.use("/api/usuario",userCont);
